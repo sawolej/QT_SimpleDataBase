@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DataBase</class>
+ <widget class="QMainWindow" name="DataBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DataBase</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="2">
+     <widget class="QPushButton" name="mixBtn">
+      <property name="text">
+       <string>WYPOŻYCZENIA</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="usrBtn">
+      <property name="text">
+       <string>OSOBY</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="bookBtn">
+      <property name="text">
+       <string>KSIĄŻKI</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="3">
+     <widget class="QStackedWidget" name="pages">
+      <property name="currentIndex">
+       <number>3</number>
+      </property>
+      <widget class="QWidget" name="page_3"/>
+      <widget class="QWidget" name="page_4">
+       <widget class="QTableView" name="tableBooks">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>60</y>
+          <width>371</width>
+          <height>401</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QStackedWidget" name="booksPages">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>70</y>
+          <width>281</width>
+          <height>391</height>
+         </rect>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="page_7">
+         <widget class="QTextEdit" name="inputBookTitle">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>40</y>
+            <width>231</width>
+            <height>31</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QTextEdit" name="inputBookAuthor">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>90</y>
+            <width>231</width>
+            <height>31</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="AddBookBtn">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>140</y>
+            <width>91</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Dodaj</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="subpageEditBook">
+         <widget class="QTextEdit" name="inputBookAuthor_2">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>40</y>
+            <width>231</width>
+            <height>31</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QTextEdit" name="inputBookTitle_2">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>90</y>
+            <width>231</width>
+            <height>31</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="updateBookBtn">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>160</y>
+            <width>80</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Aktualizuj</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="backToAddinBookBtn">
+          <property name="geometry">
+           <rect>
+            <x>70</x>
+            <y>360</y>
+            <width>151</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Dodaj nową książkę</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="delButton">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>190</y>
+            <width>80</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Usuń</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>10</y>
+            <width>31</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>ID :</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="id_Book">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>10</y>
+            <width>31</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_5">
+       <widget class="QTableView" name="tableUsers">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>60</y>
+          <width>371</width>
+          <height>401</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QStackedWidget" name="userPages">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>70</y>
+          <width>281</width>
+          <height>391</height>
+         </rect>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="page_8">
+         <widget class="QTextEdit" name="inputUserName">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>40</y>
+            <width>231</width>
+            <height>31</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QTextEdit" name="inputUserSurname">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>90</y>
+            <width>231</width>
+            <height>31</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="AddUserBtn">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>140</y>
+            <width>91</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Dodaj </string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="subpageEditUsr">
+         <widget class="QTextEdit" name="inputUserName_2">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>40</y>
+            <width>231</width>
+            <height>31</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QTextEdit" name="inputUserSurname_2">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>90</y>
+            <width>231</width>
+            <height>31</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="updateUsrBtn">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>160</y>
+            <width>80</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Atualizuj</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="backToAddinBtn">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>360</y>
+            <width>181</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Dodaj nowego użytkownika</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="delButton_2">
+          <property name="geometry">
+           <rect>
+            <x>100</x>
+            <y>190</y>
+            <width>80</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Usuń</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_2">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>10</y>
+            <width>31</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>ID :</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="id_usr">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>10</y>
+            <width>31</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="page_6">
+       <widget class="QTableView" name="tableUsers_2">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>60</y>
+          <width>371</width>
+          <height>171</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QTableView" name="tableBooks_2">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>270</y>
+          <width>371</width>
+          <height>171</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="gimmeThatBookBtn">
+        <property name="geometry">
+         <rect>
+          <x>170</x>
+          <y>460</y>
+          <width>80</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Wypożycz</string>
+        </property>
+       </widget>
+       <widget class="QStackedWidget" name="stackedWidget">
+        <property name="geometry">
+         <rect>
+          <x>440</x>
+          <y>50</y>
+          <width>311</width>
+          <height>381</height>
+         </rect>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="page_9">
+         <widget class="QTableView" name="tableBookBorrows">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>301</width>
+            <height>311</height>
+           </rect>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_book">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>40</y>
+            <width>241</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="delButton_3">
+          <property name="geometry">
+           <rect>
+            <x>120</x>
+            <y>340</y>
+            <width>80</width>
+            <height>24</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Usuń</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_10"/>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
